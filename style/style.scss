@@ -19,41 +19,33 @@ body {
   justify-content: center;
   align-items: center;
   color: #70757a;
-  width: 48px;
-  height: 48px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 35px;
   font-weight: 700;
-  border: 4px solid #0da192;
-  &:nth-child(1) {
-    border-left: 4px solid transparent;
-    border-top: 4px solid transparent;
-  }
-  &:nth-child(2) {
-    border-top: 4px solid transparent;
-  }
-  &:nth-child(3) {
-    border-top: 4px solid transparent;
-    border-right: 4px solid transparent;
-  }
-  &:nth-child(4){
-    border-left: 4px solid transparent;
-  }
-  &:nth-child(6) {
-    border-right: 4px solid transparent;
-  }
-  &:nth-child(7) {
-    border-left: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-  }
-  &:nth-child(8) {
-    border-bottom: 4px solid transparent;
-  }
-  &:nth-child(9) {
-    border-bottom: 4px solid transparent;
-    border-right: 4px solid transparent;
-  }
+  position: relative;
 }
 .svgLine {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.svgX{
+  stroke: #70757a;
+  stroke-width: 6;
+  stroke-dasharray: 35;
+  stroke-dashoffset: 35;
+  animation-name: svgX;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes svgX {
+  0%{
+    stroke-dashoffset: 35;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
 }
