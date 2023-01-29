@@ -16,6 +16,7 @@ body {
 
 .cells {
   outline: 0;
+  height: 50px;
   padding: 8px;
   display: flex;
   justify-content: center;
@@ -49,6 +50,23 @@ body {
           animation-fill-mode: forwards;
 }
 
+.svgO {
+  stroke: rgb(203, 198, 198);
+  stroke-width: 6;
+  width: 50px !important;
+  height: 50px;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  -webkit-animation-name: svgO;
+          animation-name: svgO;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes svgX {
   0% {
     stroke-dashoffset: 35;
@@ -61,6 +79,22 @@ body {
 @keyframes svgX {
   0% {
     stroke-dashoffset: 35;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes svgO {
+  0% {
+    stroke-dashoffset: 130;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes svgO {
+  0% {
+    stroke-dashoffset: 130;
   }
   100% {
     stroke-dashoffset: 0;
